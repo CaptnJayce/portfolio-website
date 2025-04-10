@@ -1,7 +1,1 @@
-<script>
-	import Navbar from "../../components/Navbar.svelte";
-
-</script>
-
-<Navbar />
-<h1> About </h1>
+<h1 class = "title"> About </h1>

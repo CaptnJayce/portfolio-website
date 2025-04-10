@@ -1,6 +1,1 @@
-<script>
-    import Navbar from "../components/Navbar.svelte";
-</script>
-
-<Navbar />
-<h1>Welcome to my website... It's a work in progress</h1>
+<h1 class = "title">Welcome to my website... It's a work in progress</h1>
