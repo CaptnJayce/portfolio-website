@@ -18,9 +18,9 @@ export default function HomePage() {
                             Full Stack | C++ | Raylib
                         </p>
                         <p className="text-[18px] font-[roboto] pb-5">
-                            Hi! I'm a web and game developer with a strong focus
-                            on user experience — and just enough stubbornness to
-                            make sure it's done right.
+                            Hi! I&apos;m a web and game developer with a strong
+                            focus on user experience — and just enough
+                            stubbornness to make sure it&apos;s done right.
                         </p>
                         <p className="text-[18px] font-[roboto] pb-5">
                             Dimentia demo releasing on Itch.io soon™
