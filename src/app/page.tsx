@@ -12,21 +12,20 @@ export default function HomePage() {
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="w-full max-w-5xl grid grid-cols-2">
                     <div className="self-start">
-                        <p className="text-4xl pb-5">Casey Jestico</p>
-                        <p className="text-2xl pb-5">
-                            Game &amp; Web Developer
+                        <p className="text-[40px] h-12">Casey Jestico</p>
+                        <p className="text-[32px]">Game &amp; Web Developer</p>
+                        <p className="text-[18px] font-[roboto] pb-5">
+                            Full Stack | C++ | Raylib
                         </p>
-                        <p className="text-1xl">
-                            I love creating efficient and fun applications to
-                            express my ideas.
+                        <p className="text-[18px] font-[roboto] pb-5">
+                            Hi! I'm a web and game developer with a strong focus
+                            on user experience — and just enough stubbornness to
+                            make sure it's done right.
                         </p>
-                        <p className="text-1xl pb-5">
-                            Most of my games will be canonical tales that take
-                            place in a Universe called Kalpa, that I hope to
-                            keep adding to over my life :)
+                        <p className="text-[18px] font-[roboto] pb-5">
+                            Dimentia demo releasing on Itch.io soon™
                         </p>
-
-                        <div className="flex gap-x-8 items-center pb-15">
+                        <div className="flex gap-x-8 items-center pb-10">
                             <a
                                 href="https://github.com/CaptnJayce"
                                 target="_blank"
@@ -74,41 +73,34 @@ export default function HomePage() {
                                 />
                             </a>
                         </div>
-
-                        <p className="text-2xl pb-2">About Me</p>
+                        <p className="text-[40px] pb-2">About Me</p>
                     </div>
 
-                    <div className="justify-self-end">
-                        <img
-                            src="https://l9eocjqs7z.ufs.sh/f/o1OesjXRQmL1SWeu4YVEGqKvQUZVmWlnDbPTfFwujRYe6OB0"
-                            alt="avatar"
-                            width="300"
-                            height="300"
-                        ></img>
-                    </div>
+                    <img
+                        src="https://l9eocjqs7z.ufs.sh/f/o1OesjXRQmL1SWeu4YVEGqKvQUZVmWlnDbPTfFwujRYe6OB0"
+                        alt="avatar"
+                        width="300"
+                        height="300"
+                        className="justify-self-end rounded-full shadow-lg shadow-[#575279]  dark:shadow-white"
+                    />
                 </div>
 
-                <div className="w-full max-w-5xl text-[#907aa9]">
-                    <p className="text-1xl pb-2">
-                        I&apos;m a computer science graduate passionate about
-                        making software and games. I love developing for the web
-                        using stacks like T3, and getting closer to the hardware
-                        with C++. For me, programming is the best way to express
-                        the ideas I come up with due to the breadth of options
-                        and sheer level of control.
+                <div className="w-full max-w-5xl font-[roboto]">
+                    <p className="text-[18px] pb-2">
+                        I&apos;m a computer science graduate who loves to
+                        develop for the web using stacks like T3, and getting
+                        closer to the hardware with C++. For me, programming is
+                        the best way to express the ideas I come up with due to
+                        the breadth of options and sheer level of control.
                     </p>
-                    <p className="text-1xl pb-2">
-                        I&apos;m always focused on growing my skills to become
-                        the best developer I can be. Admittedly, I went through
-                        University delusional - believing the degree was enough
-                        to work in SWE. Upon graduating I was quickly humbled
-                        when confronted with just how much I didn&apos;t know
-                        and quickly sought to make amendments to gaps in
-                        knowledge and ability. I did this through personal and
-                        collaborative projects, additional coursework, events,
-                        and some freelance.
+                    <p className="text-[18px] pb-2">
+                        Currently, I&apos;m developing <em>Dimentia</em>, a
+                        roguelike shoot-em-up which will feature various unique
+                        gameplay mechanics and lore surrounding the theme of{" "}
+                        <em>chaos</em>. You can find out more in the projects
+                        tab :)
                     </p>
-                    <p>
+                    <p className="text-[18px] pb-2">
                         Outside of coding, I enjoy exploring new technology,
                         gaming, 3D printing, and socialising with friends.
                     </p>
