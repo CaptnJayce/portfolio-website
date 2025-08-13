@@ -1,4 +1,3 @@
-import Button from "../components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -14,7 +13,9 @@ export default function HomePage() {
                 <div className="w-full max-w-5xl grid grid-cols-2">
                     <div className="self-start">
                         <p className="text-4xl pb-5">Casey Jestico</p>
-                        <p className="text-2xl pb-5">Game & Web Developer</p>
+                        <p className="text-2xl pb-5">
+                            Game &amp; Web Developer
+                        </p>
                         <p className="text-1xl">
                             I love creating efficient and fun applications to
                             express my ideas.
@@ -89,21 +90,21 @@ export default function HomePage() {
 
                 <div className="w-full max-w-5xl text-[#907aa9]">
                     <p className="text-1xl pb-2">
-                        I'm a computer science graduate passionate about making
-                        software and games. I love developing for the web using
-                        stacks like T3, and getting closer to the hardware with
-                        C++. For me, programming is the best way to express the
-                        ideas I come up with due to the breadth of options and
-                        sheer level of control.
+                        I&apos;m a computer science graduate passionate about
+                        making software and games. I love developing for the web
+                        using stacks like T3, and getting closer to the hardware
+                        with C++. For me, programming is the best way to express
+                        the ideas I come up with due to the breadth of options
+                        and sheer level of control.
                     </p>
                     <p className="text-1xl pb-2">
-                        I'm always focused on growing my skills to become the
-                        best developer I can be. Admittedly, I went through
+                        I&apos;m always focused on growing my skills to become
+                        the best developer I can be. Admittedly, I went through
                         University delusional - believing the degree was enough
                         to work in SWE. Upon graduating I was quickly humbled
-                        when confronted with just how much I didn't know and
-                        quickly sought to make amendments to gaps in knowledge
-                        and ability. I did this through personal and
+                        when confronted with just how much I didn&apos;t know
+                        and quickly sought to make amendments to gaps in
+                        knowledge and ability. I did this through personal and
                         collaborative projects, additional coursework, events,
                         and some freelance.
                     </p>
