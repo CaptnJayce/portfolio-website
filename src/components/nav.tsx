@@ -1,33 +1,16 @@
 "use client";
+import Button from "../components/button";
 
 export default function NavBar() {
     return (
-        <nav className="w-full flex gap-32 pt-10 justify-between">
+        <nav className="w-full flex gap-32 pt-10 pb-25 justify-between">
             <div className="pl-100">
-                <button
-                    type="button"
-                    onClick={() => alert("This isn't implemented yet")}
-                >
-                    Something
-                </button>
+                <Button href={"/"} children={"Home"} />
             </div>
 
             <div className="flex gap-10 pr-100">
-                <button
-                    type="button"
-                    onClick={() => alert("This also isn't implemented yet")}
-                >
-                    Something Else
-                </button>
-
-                <button
-                    type="button"
-                    onClick={() =>
-                        alert("This is actually also not implemented yet")
-                    }
-                >
-                    Something Else Else
-                </button>
+                <Button href={"projects"} children={"Projects"} />
+                <Button href={"blogs"} children={"Blogs"} />
             </div>
         </nav>
     );

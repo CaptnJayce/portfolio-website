@@ -8,5 +8,5 @@
 }
 
 body {
-    @apply bg-slate-900 text-violet-100;
+    @apply bg-[#faf4ed] text-[#575279];
 }
