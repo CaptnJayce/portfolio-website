@@ -1,8 +1,13 @@
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Roboto, Tiny5 } from "next/font/google";
-import NavBar from "../components/nav";
-import Footer from "../components/footer";
+import NavBar from "~/components/nav";
+import Hero from "~/components/hero";
+import Projects from "~/components/projects";
+import About from "~/components/about";
+import Skills from "~/components/skills";
+import Blog from "~/components/blog";
+import Footer from "~/components/footer";
 
 export const metadata: Metadata = {
     title: "CaptnJayce",
@@ -21,14 +26,18 @@ const font2 = Roboto({
     variable: "--font-geist-sans",
 });
 
-export default function RootLayout({
-    children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({}: Readonly<{
+    children: React.ReactNode;
+}>) {
     return (
         <html lang="en" className={`${font.variable}`}>
             <body>
                 <NavBar />
-                {children}
+                <Hero />
+                <Projects />
+                <Skills />
+                <Blog />
+                <About />
                 <Footer />
             </body>
         </html>
