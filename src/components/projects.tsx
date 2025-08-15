@@ -56,8 +56,8 @@ export default async function Projects() {
                                 </h2>
                                 <p className="text-sm text-[--colour-low-violet]">
                                     {project.isCollaborative
-                                        ? `Collaborative with ${project.collaborators.join(", ")}`
-                                        : `Solo project by ${project.author}`}
+                                        ? `Team Project | ${project.collaborators.join(", ")}`
+                                        : `Solo Project | ${project.author}`}
                                 </p>
                                 {project.durationDays !== null ? (
                                     <p className="text-sm mt-1 text-[--colour-low-violet]">
