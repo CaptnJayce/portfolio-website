@@ -6,9 +6,14 @@ export default function NavBar() {
     const [mounted, setMounted] = useState(false);
     const [darkMode, setDarkMode] = useState(() => {
         if (typeof window !== "undefined") {
-            return localStorage.getItem("darkMode") === "true";
+            const savedMode = localStorage.getItem("darkMode");
+            if (savedMode !== null) {
+                return savedMode === "true";
+            }
+            return true;
         }
-        return false;
+        // default to dark mode
+        return true;
     });
 
     useEffect(() => {
@@ -16,14 +21,16 @@ export default function NavBar() {
     }, []);
 
     useEffect(() => {
-        if (darkMode) {
-            document.body.classList.add("dark");
-            localStorage.setItem("darkMode", "true");
-        } else {
-            document.body.classList.remove("dark");
-            localStorage.setItem("darkMode", "false");
+        if (mounted) {
+            if (darkMode) {
+                document.body.classList.add("dark");
+                localStorage.setItem("darkMode", "true");
+            } else {
+                document.body.classList.remove("dark");
+                localStorage.setItem("darkMode", "false");
+            }
         }
-    }, [darkMode]);
+    }, [darkMode, mounted]);
 
     const toggleDarkMode = () => {
         setDarkMode((prev) => !prev);
@@ -37,15 +44,10 @@ export default function NavBar() {
                 <Button href="/">Home</Button>
             </div>
 
-            <div>
+            <div className="flex gap-10 pr-50">
                 <Button onClick={toggleDarkMode}>
                     {darkMode ? "Light Mode" : "Dark Mode"}
                 </Button>
-            </div>
-
-            <div className="flex gap-10 pr-50">
-                <Button href="projects">Projects</Button>
-                <Button href="blogs">Blogs</Button>
             </div>
         </nav>
     );

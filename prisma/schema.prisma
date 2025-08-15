@@ -24,6 +24,10 @@ model Project {
   toolsUsed       String[]
 }
 
+model Avatar {
+    id            Int     @id @default(autoincrement())
+    imageUrl      String  @db.VarChar(500)
+}
 
 model Post {
   id        Int      @id @default(autoincrement())

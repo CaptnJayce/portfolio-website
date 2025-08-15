@@ -27,7 +27,7 @@ export default async function Projects() {
                 <div className="w-full max-w-5xl font-[roboto]">
                     <p className="text-[40px] font-[Tiny5]">Projects</p>
 
-                    <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-1 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {projectsWithDuration.map((project) => (
                             <div
                                 key={project.id}

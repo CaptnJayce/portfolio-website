@@ -5,8 +5,16 @@ import {
     faLinkedin,
     faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
+import { db } from "~/server/db";
 
-export default function Hero() {
+export default async function Hero() {
+    // fetch avatar
+    const avatar = await db.avatar.findFirst({
+        select: {
+            imageUrl: true,
+        },
+    });
+
     return (
         <div className="container mx-auto px-8">
             <div className="flex flex-col justify-center items-center w-full">
@@ -75,7 +83,7 @@ export default function Hero() {
                     </div>
 
                     <img
-                        src="https://l9eocjqs7z.ufs.sh/f/o1OesjXRQmL1SWeu4YVEGqKvQUZVmWlnDbPTfFwujRYe6OB0"
+                        src={avatar!.imageUrl}
                         alt="avatar"
                         width="300"
                         height="300"
