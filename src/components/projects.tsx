@@ -24,15 +24,13 @@ export default async function Projects() {
     return (
         <div className="container mx-auto px-8 pb-20">
             <div className="flex flex-col justify-center items-center w-full">
-                <div className="w-full max-w-5xl font-[roboto]">
-                    <p className="text-[40px] justify-self-start font-[Tiny5]">
-                        Projects
-                    </p>
+                <div className="w-full max-w-6xl font-[roboto]">
+                    <p className="text-[40px] font-[Tiny5]">Projects</p>
                     <div className="mt-1 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {projectsWithDuration.map((project) => (
                             <div
                                 key={project.id}
-                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col h-full"
+                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow-[#ffeeff] hover:shadow-lg transition flex flex-col h-full"
                             >
                                 {project.imageUrl && (
                                     <img
@@ -41,7 +39,7 @@ export default async function Projects() {
                                         className="w-full h-48 object-cover rounded"
                                     />
                                 )}
-                                <h2 className="mt-4 text-xl font-bold flex items-center">
+                                <h2 className="mt-2 text-[24px] font-[Tiny5] flex items-center">
                                     {project.title}
                                     <a
                                         href={project.projectUrl}
@@ -70,7 +68,7 @@ export default async function Projects() {
                                         <span>Work in Progress</span>
                                     ) : null}
                                 </div>
-                                <p className="text-md mt-2">
+                                <p className="text-[18px] mt-2">
                                     {project.description}
                                 </p>
                                 <div className="flex-grow" />

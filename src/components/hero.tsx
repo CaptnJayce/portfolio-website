@@ -17,7 +17,7 @@ export default async function Hero() {
     return (
         <div className="container mx-auto px-8 pt-5 pb-20">
             <div className="flex flex-col justify-center items-center w-full">
-                <div className="w-full max-w-5xl grid grid-cols-2">
+                <div className="w-full max-w-6xl grid grid-cols-2">
                     <div className="self-center flex flex-col justify-center">
                         <p className="text-[20px] font-[roboto] pb-5">
                             C++ | Raylib | Full Stack
@@ -31,7 +31,7 @@ export default async function Hero() {
                         <p className="text-[20px] font-[roboto] pb-5">
                             Dimentia demo releasing on Itch.io soon™
                         </p>
-                        <div className="flex gap-x-8 items-center text-[#ffbfe8]">
+                        <div className="flex gap-x-8 items-center text-[var(--colour-highlight)]">
                             <a
                                 href="https://github.com/CaptnJayce"
                                 target="_blank"
@@ -73,7 +73,7 @@ export default async function Hero() {
                         alt="avatar"
                         width="300"
                         height="300"
-                        className="justify-self-end rounded-full shadow-lg shadow-[#ffbfe8]"
+                        className="justify-self-end border-3 border-[var(--colour-highlight)] rounded-full shadow-lg shadow-[#ffeeff]"
                     />
                 </div>
             </div>
