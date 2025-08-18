@@ -22,16 +22,17 @@ export default async function Projects() {
     });
 
     return (
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-8 pb-20">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="w-full max-w-5xl font-[roboto]">
-                    <p className="text-[40px] font-[Tiny5]">Projects</p>
-
+                    <p className="text-[40px] justify-self-start font-[Tiny5]">
+                        Projects
+                    </p>
                     <div className="mt-1 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {projectsWithDuration.map((project) => (
                             <div
                                 key={project.id}
-                                className="border rounded-lg p-4 shadow hover:shadow-lg transition"
+                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col h-full"
                             >
                                 {project.imageUrl && (
                                     <img
@@ -54,20 +55,25 @@ export default async function Projects() {
                                         />
                                     </a>
                                 </h2>
-                                <p className="text-sm text-[--colour-low-violet]">
-                                    {project.isCollaborative
-                                        ? `Team Project | ${project.collaborators.join(", ")}`
-                                        : `Solo Project | ${project.author}`}
+                                <div className="flex items-center justify-between text-sm">
+                                    <span>
+                                        {project.isCollaborative
+                                            ? `Team Project | ${project.collaborators.join(", ")}`
+                                            : `Solo Project | ${project.author}`}
+                                    </span>
+                                    {project.durationDays !== null ? (
+                                        <span>
+                                            Duration: {project.durationDays}{" "}
+                                            days
+                                        </span>
+                                    ) : project.startedAt ? (
+                                        <span>Work in Progress</span>
+                                    ) : null}
+                                </div>
+                                <p className="text-md mt-2">
+                                    {project.description}
                                 </p>
-                                {project.durationDays !== null ? (
-                                    <p className="text-sm mt-1 text-[--colour-low-violet]">
-                                        Duration: {project.durationDays} days
-                                    </p>
-                                ) : project.startedAt ? (
-                                    <p className="text-sm mt-1 text-[--colour-low-violet]">
-                                        Project is Work in Progress
-                                    </p>
-                                ) : null}
+                                <div className="flex-grow" />
                                 {project.toolsUsed?.length > 0 && (
                                     <p className="text-sm mt-2">
                                         Tools: {project.toolsUsed.join(", ")}

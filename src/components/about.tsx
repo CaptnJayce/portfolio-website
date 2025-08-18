@@ -5,18 +5,19 @@ export default function About() {
                 <div className="w-full max-w-5xl font-[roboto]">
                     <p className="text-[40px] font-[Tiny5]">About Me</p>
                     <p className="text-[18px] pb-2">
-                        I&apos;m a computer science graduate who loves to
-                        develop for the web using stacks like T3, and getting
-                        closer to the hardware with C++. For me, programming is
-                        the best way to express the ideas I come up with due to
-                        the breadth of options and sheer level of control.
+                        Hi! I&apos;m Casey, a computer science graduate who
+                        loves to develop webapps and games. Since graduation, I
+                        have worked freelance as well as voluntarily.
                     </p>
                     <p className="text-[18px] pb-2">
                         Currently, I&apos;m developing <em>Dimentia</em>, a
                         roguelike shoot-em-up which will feature various unique
                         gameplay mechanics and lore surrounding the theme of{" "}
-                        <em>chaos</em>. You can find out more in the projects
-                        tab :)
+                        <em>chaos</em>. <br></br> Additionally, I&apos;m working
+                        with some fellow graduates on a startup called
+                        'Covelopers'. We're currently developing an InterviewAI
+                        to help anyone hone their interview technique and
+                        speaking skills.
                     </p>
                     <p className="text-[18px] pb-2">
                         Outside of coding, I enjoy exploring new technology,

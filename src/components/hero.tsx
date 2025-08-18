@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
     faItchIo,
-    faLinkedin,
     faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { db } from "~/server/db";
@@ -16,25 +15,23 @@ export default async function Hero() {
     });
 
     return (
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-8 pt-5 pb-20">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="w-full max-w-5xl grid grid-cols-2">
-                    <div className="self-start">
-                        <p className="text-[40px] h-12">Casey Jestico</p>
-                        <p className="text-[32px]">Game &amp; Web Developer</p>
-                        <p className="text-[18px] font-[roboto] pb-5">
-                            Full Stack | C++ | Raylib
+                    <div className="self-center flex flex-col justify-center">
+                        <p className="text-[20px] font-[roboto] pb-5">
+                            C++ | Raylib | Full Stack
                         </p>
-                        <p className="text-[18px] font-[roboto] pb-5">
+                        <p className="text-[20px] font-[roboto] pb-5">
                             Hi! I&apos;m a web and game developer with a strong
                             focus on user experience — and just enough
                             stubbornness to make sure it&apos;s done right. I
                             specialize in C++, Raylib, and Linux.
                         </p>
-                        <p className="text-[18px] font-[roboto] pb-5">
+                        <p className="text-[20px] font-[roboto] pb-5">
                             Dimentia demo releasing on Itch.io soon™
                         </p>
-                        <div className="flex gap-x-8 items-center pb-10">
+                        <div className="flex gap-x-8 items-center text-[#ffbfe8]">
                             <a
                                 href="https://github.com/CaptnJayce"
                                 target="_blank"
@@ -43,18 +40,7 @@ export default async function Hero() {
                             >
                                 <FontAwesomeIcon
                                     icon={faGithub}
-                                    className="w-8"
-                                />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/jc444/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-70 transition-opacity"
-                            >
-                                <FontAwesomeIcon
-                                    icon={faLinkedin}
-                                    className="w-8"
+                                    className="w-10"
                                 />
                             </a>
                             <a
@@ -65,7 +51,7 @@ export default async function Hero() {
                             >
                                 <FontAwesomeIcon
                                     icon={faDiscord}
-                                    className="w-8"
+                                    className="w-10"
                                 />
                             </a>
                             <a
@@ -76,7 +62,7 @@ export default async function Hero() {
                             >
                                 <FontAwesomeIcon
                                     icon={faItchIo}
-                                    className="w-8"
+                                    className="w-10"
                                 />
                             </a>
                         </div>
@@ -87,7 +73,7 @@ export default async function Hero() {
                         alt="avatar"
                         width="300"
                         height="300"
-                        className="justify-self-end rounded-full shadow-lg shadow-[#575279] dark:shadow-white"
+                        className="justify-self-end rounded-full shadow-lg shadow-[#ffbfe8]"
                     />
                 </div>
             </div>

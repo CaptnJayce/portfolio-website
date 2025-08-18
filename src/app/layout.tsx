@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Roboto, Tiny5 } from "next/font/google";
-import NavBar from "~/components/nav";
+import Nav from "~/components/nav";
 import Hero from "~/components/hero";
 import Projects from "~/components/projects";
 import About from "~/components/about";
@@ -32,11 +32,10 @@ export default function RootLayout({}: Readonly<{
     return (
         <html lang="en" className={`${font.variable}`}>
             <body>
-                <NavBar />
+                <Nav />
                 <Hero />
                 <Projects />
                 <Skills />
-                <Blog />
                 <About />
                 <Footer />
             </body>
