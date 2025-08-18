@@ -29,10 +29,11 @@ model Avatar {
     imageUrl      String  @db.VarChar(500)
 }
 
-model Post {
+model Blog {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   title     String   @db.VarChar(255)
   author    String   @db.VarChar(255) 
+  content   String?  @db.Text
 }

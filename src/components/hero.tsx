@@ -31,6 +31,9 @@ export default async function Hero() {
                         <p className="text-[20px] font-[roboto] pb-5">
                             Dimentia demo releasing on Itch.io soon™
                         </p>
+                        <p className="text-[20px] font-[roboto] pb-5">
+                            Blog also coming soon™...
+                        </p>
                         <div className="flex gap-x-8 items-center text-[var(--colour-highlight)]">
                             <a
                                 href="https://github.com/CaptnJayce"
