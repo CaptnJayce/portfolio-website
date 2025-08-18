@@ -13,9 +13,9 @@ export default function About() {
                         Currently, I&apos;m developing <em>Dimentia</em>, a
                         roguelike shoot-em-up which will feature various unique
                         gameplay mechanics and lore surrounding the theme of{" "}
-                        <em>chaos</em>. <br></br> Additionally, I&apos;m working
+                        <em>chaos</em>. <br /> Additionally, I&apos;m working
                         with some fellow graduates on a startup called
-                        'Covelopers'. We're currently developing an InterviewAI
+                        &apos;Covelopers&apos;. We&apos;re currently developing an InterviewAI
                         to help anyone hone their interview technique and
                         speaking skills.
                     </p>
