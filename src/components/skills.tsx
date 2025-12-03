@@ -1,3 +1,4 @@
+// TODO HIGH: Move this into prisma so i dont have to redeploy each time its updated
 export default function Skills() {
     return (
         <div className="container mx-auto px-8 pb-20">
@@ -6,28 +7,19 @@ export default function Skills() {
                     <p className="text-[40px]">Expertise</p>
                     <div className="text-[24px] flex flex-wrap gap-4">
                         <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            C++
+                            Godot
                         </p>
                         <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            Lua
+                            Typescript
                         </p>
                         <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            Linux (Arch BTW)
+                            Linux
                         </p>
                         <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            Raylib
+                            Aseprite
                         </p>
                         <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
                             Git
-                        </p>
-                        <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            VSCode
-                        </p>
-                        <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            Vim
-                        </p>
-                        <p className="border-2 border-[var(--colour-highlight)] rounded-md pr-1 pl-1">
-                            JetBrains
                         </p>
                     </div>
                 </div>

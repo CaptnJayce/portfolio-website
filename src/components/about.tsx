@@ -19,10 +19,6 @@ export default function About() {
                         an InterviewAI to help anyone hone their interview
                         technique and speaking skills.
                     </p>
-                    <p className="text-[18px] pb-2">
-                        Outside of coding, I enjoy exploring new technology,
-                        gaming, 3D printing, and socialising with friends.
-                    </p>
                 </div>
             </div>
         </div>

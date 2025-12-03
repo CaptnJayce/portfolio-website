@@ -30,7 +30,7 @@ export default async function Projects() {
                         {projectsWithDuration.map((project) => (
                             <div
                                 key={project.id}
-                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow-[#ffeeff] hover:shadow-lg transition flex flex-col h-full"
+                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow-[#caa8f5] hover:shadow-lg transition flex flex-col h-full"
                             >
                                 {project.imageUrl && (
                                     <img

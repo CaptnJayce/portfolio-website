@@ -20,18 +20,18 @@ export default async function Hero() {
                 <div className="w-full max-w-6xl grid grid-cols-2">
                     <div className="self-center flex flex-col justify-center">
                         <p className="text-[20px] font-[roboto] pb-5">
-                            C++ | Raylib | Full Stack
+                            Godot | Typescript | Linux
                         </p>
                         <p className="text-[20px] font-[roboto] pb-5">
                             Hi! I&apos;m a web and game developer with a strong
-                            focus on user experience — and just enough
-                            stubbornness to make sure it&apos;s done right. I
-                            specialize in C++, Raylib, and Linux.
+                            focus on creativity. I specialize in Godot and
+                            Typescript, but typically work in a variety of
+                            languages due to modding different games 8)
                         </p>
+                        <p className="text-[32px]">Upcoming...</p>
                         <p className="text-[20px] font-[roboto] pb-5">
                             Dimentia demo releasing on Itch.io soon™
-                        </p>
-                        <p className="text-[20px] font-[roboto] pb-5">
+                            <br></br>
                             Blog also coming soon™...
                         </p>
                         <div className="flex gap-x-8 items-center text-[var(--colour-highlight)]">
@@ -76,7 +76,7 @@ export default async function Hero() {
                         alt="avatar"
                         width="300"
                         height="300"
-                        className="justify-self-end border-3 border-[var(--colour-highlight)] rounded-full shadow-lg shadow-[#ffeeff]"
+                        className="justify-self-end border-3 border-[var(--colour-highlight)] rounded-full shadow-lg shadow-[#caa8f5]"
                     />
                 </div>
             </div>
