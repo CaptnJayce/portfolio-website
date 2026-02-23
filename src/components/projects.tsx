@@ -1,14 +1,12 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { db } from "~/server/db";
 
 export default async function Projects() {
-    // fetch projects
     const projects = await db.project.findMany({
         orderBy: { createdAt: "desc" },
     });
 
-    // calculate days / may remove
     const projectsWithDuration = projects.map((project) => {
         let durationDays: number | null = null;
 
@@ -21,8 +19,13 @@ export default async function Projects() {
         return { ...project, durationDays };
     });
 
+    const getRepoIcon = (url: string) => {
+        if (url.includes("gitlab")) return faGitlab;
+        return faGithub;
+    };
+
     return (
-        <div className="container mx-auto px-8 pb-20">
+        <div className="container mx-auto mb-10">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="w-full max-w-6xl font-[roboto]">
                     <p className="text-[40px] font-[Tiny5]">Projects</p>
@@ -30,26 +33,34 @@ export default async function Projects() {
                         {projectsWithDuration.map((project) => (
                             <div
                                 key={project.id}
-                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow-[#caa8f5] hover:shadow-lg transition flex flex-col h-full"
+                                className="border-2 border-[var(--colour-highlight)] rounded-lg p-4 shadow-[#E84A72] hover:shadow-lg transition flex flex-col h-full"
                             >
-                                {project.imageUrl && (
-                                    <img
-                                        src={project.imageUrl}
-                                        alt={project.title}
-                                        className="w-full h-48 object-cover rounded"
-                                    />
-                                )}
+                                <div className="w-full h-48 object-cover rounded">
+                                    {project.imageUrl ? (
+                                        <img
+                                            src={project.imageUrl}
+                                            alt={project.title}
+                                            className="w-full h-48 object-cover rounded"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-48 flex items-center justify-center rounded text-48px font-[tiny5]">
+                                            No image available :(
+                                        </div>
+                                    )}
+                                </div>
                                 <h2 className="mt-2 text-[24px] font-[Tiny5] flex items-center">
                                     {project.title}
                                     <a
                                         href={project.projectUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="ml-auto hover:opacity-70 transition-opacity"
+                                        className="ml-auto"
                                     >
                                         <FontAwesomeIcon
-                                            icon={faGithub}
-                                            className="w-8"
+                                            icon={getRepoIcon(
+                                                project.projectUrl,
+                                            )}
+                                            className="w-8 hover:text-[var(--colour-highlight)] duration-200 ease-in-out"
                                         />
                                     </a>
                                 </h2>
@@ -57,7 +68,7 @@ export default async function Projects() {
                                     <span>
                                         {project.isCollaborative
                                             ? `Team Project | ${project.collaborators.join(", ")}`
-                                            : `Solo Project | ${project.author}`}
+                                            : `Solo Project`}
                                     </span>
                                     {project.durationDays !== null ? (
                                         <span>
