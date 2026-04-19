@@ -1,3 +1,3 @@
-Personal Portfolio Website made in T3.
+Portfolio schmolio. 
 
-No real reason I picked T3, just seemed like a nice stack to use (and it is!)
+Kinda messy, ported from T3 to React Router v7 + supabase
